@@ -1,0 +1,27 @@
+class Solution {
+public:
+    bool isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= sqrt(num); ++i) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+    int diagonalPrime(vector<vector<int>>& nums) {
+        int n = nums.size();
+        int maxPrime = 0; // Variable to store the largest prime
+
+        for (int i = 0; i < n; ++i) {
+            // Check the first diagonal element nums[i][i]
+            if (isPrime(nums[i][i])) {
+                maxPrime = max(maxPrime, nums[i][i]);
+            }
+            // Check the second diagonal element nums[i][n - i - 1]
+            if (isPrime(nums[i][n - i - 1])) {
+                maxPrime = max(maxPrime, nums[i][n - i - 1]);
+            }
+        }
+        return maxPrime;
+    }
+
+};
