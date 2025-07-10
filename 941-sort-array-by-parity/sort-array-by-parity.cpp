@@ -1,21 +1,17 @@
 class Solution {
 public:
     vector<int> sortArrayByParity(vector<int>& nums) {
-        vector<int> result;
-
-    // Add all even numbers first
-    for (int num : nums) {
-        if (num % 2 == 0) {
-            result.push_back(num);
+       vector <int> answer;
+       for(int i=0; i< nums.size(); i++){
+        if(nums[i] % 2== 0){
+            answer.push_back(nums[i]);
         }
-    }
-
-    // Add all odd numbers next
-    for (int num : nums) {
-        if (num % 2 != 0) {
-            result.push_back(num);
+       }
+        for(int i=0; i< nums.size(); i++){
+        if(nums[i] % 2 != 0){
+            answer.push_back(nums[i]);
         }
-    }
-      return result; 
+        }
+       return answer;
     }
 };
