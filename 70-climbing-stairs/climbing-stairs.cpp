@@ -6,10 +6,12 @@ public:
     }
     int helper(int n){
         if(mp.count(n)) return mp[n];
-        if(n== 0) return 1;
-        
-        if(n < 0) return 0;
+
+        if( n==0) return 1; // valid case
+
+        if(n< 0) return 0; // bcz its go to -ve value
         mp[n]=helper(n-1)+ helper(n-2);
         return mp[n];
+
     }
 };
