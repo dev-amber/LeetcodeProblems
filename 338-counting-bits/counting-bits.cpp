@@ -1,13 +1,17 @@
 class Solution {
 public:
     vector<int> countBits(int n) {
-        vector<int> ans(n + 1);
-        ans[0] = 0; // Base case: 0 has 0 ones
+        vector<int> ans(n + 1,0);
+        for(int i=1;i<=n;i++){
 
-        for (int i = 1; i <= n; ++i) {
-            ans[i] = ans[i >> 1] + (i & 1);
+            if(i%2 ==1){
+                ans[i]= ans[i/2] + 1; // odd no
+            }
+            else{
+                ans[i]=ans[i/2]; // even no
+            }
         }
-
         return ans;
+        
     }
 };
