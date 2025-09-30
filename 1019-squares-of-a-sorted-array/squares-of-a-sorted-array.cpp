@@ -1,12 +1,11 @@
 class Solution {
 public:
-    vector<int> sortedSquares(vector<int>& nums) {
-      vector<int> squares;
-      for(int num : nums){
-       squares.push_back(num *num);
-      }
-      sort(squares.begin(), squares.end());
-      return squares;
-    }
-   
+vector<int> sortedSquares(std::vector<int>& nums) {
+     vector<int> square;
+     for(int num:nums){
+        square.push_back(num * num);
+        }
+    sort(square.begin(),square.end());
+     return square;
+}
 };
