@@ -30,9 +30,9 @@ public:
         }
 
         // compare
-        ListNode* first = head;
-        ListNode* sec = pre;
-        while (sec) {
+        ListNode* first = head; // firts compare
+        ListNode* sec = pre; // sec reverse
+        while (sec) { 
             if (first->val != sec->val)
                 return false;
             first = first->next;
