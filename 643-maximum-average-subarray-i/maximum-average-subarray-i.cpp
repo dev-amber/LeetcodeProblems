@@ -1,7 +1,7 @@
 class Solution {
 public:
     double findMaxAverage(vector<int>& nums, int k) {
-        int maxSum=INT_MIN;
+        int maxSum=INT_MIN; // -infity to store in this 
         int curSum=0;
 
         int left=0;
@@ -13,7 +13,7 @@ public:
          // window intialize
             if(right-left +1 == k){
                 maxSum=max(maxSum, curSum);
-                curSum-=nums[left];
+                curSum-=nums[left];  // window shrink prev - left side pa
                 left++;
             }
             right++;
