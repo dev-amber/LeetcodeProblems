@@ -4,7 +4,7 @@ public:
     unordered_map <int,int> mp;
     for(int i=0; i< nums.size(); i++){
         int difference= target- nums[i];
-        if(mp.count(difference)){
+        if(mp.count(difference)){ // alreadu number exirt map
         return { mp[difference] , i };
         }else{
             mp[nums[i]]= i;
