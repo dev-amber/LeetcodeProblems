@@ -17,7 +17,7 @@ public:
 
   // check cond  in both anone have null
     while(list1 && list2){
-        if(list1->val > list2->val){
+        if(list1->val >= list2->val){
             cur->next = list2;   
             list2 = list2->next;  // in this check smaller grater val ofboth
         }
