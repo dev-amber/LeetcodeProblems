@@ -31,6 +31,6 @@ public:
     //in this if anone have large vakl not size equal
     cur->next = list1 ? list1 : list2;
 
-    return ans->next;
+    return ans->next; // bcz we don return dummy node 
 }
 };
