@@ -19,14 +19,12 @@ public:
 
         while(head){
             nextnode=head->next;
-            head->next=temp;
+            head->next=temp; // values save lost
             temp=head;
             head=nextnode;
         }
 
-        if(nextnode){
-            nextnode=nextnode->next;
-        }
+      
         return temp;
     }
 };
